@@ -1,0 +1,28 @@
+{
+  "name": "vue-server-example",
+  "version": "0.0.1",
+  "description": "Example isomorphic vue.js/vue-server.js application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exdis/vue-server-example"
+  },
+  "author": "Denis Kolesnikov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/exdis/vue-server-example/issues"
+  },
+  "homepage": "https://github.com/exdis/vue-server-example",
+  "dependencies": {
+    "express": "^4.13.3",
+    "vue-server": "^0.4.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-typescript": "^2.10.0"
+  }
+}
