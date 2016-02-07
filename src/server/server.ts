@@ -4,17 +4,14 @@
 import * as express from 'express';
 import * as VueServer from 'vue-server';
 
+import Page from '../components/Page/Page';
+
 var app = express();
 
 var Vue: VueServer.Renderer = VueServer.renderer();
 
 app.get('/', function (req, res) {
-    var vm = new Vue({
-        template: '<div>{{data}}</div>',
-        data: {
-            data: 'Hello from server!'
-        }
-    });
+    var vm = new Vue(new Page());
 
     vm.$on('vueServer.htmlReady', function (html) {
         res.send(html);
