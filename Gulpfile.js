@@ -3,6 +3,8 @@ var ts = require('gulp-typescript');
 var jade = require('gulp-jade');
 var vueCompile = require('gulp-vue-compile');
 var rename = require('gulp-rename');
+var bower = require('main-bower-files');
+var uglify = require('gulp-uglify');
 var nodemon = require('gulp-nodemon');
 
 var tsProject = ts.createProject('tsconfig.json');
@@ -29,7 +31,14 @@ gulp.task('templates', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('dev', ['templates', 'ts', 'watch'], function () {
+gulp.task('vendors', function () {
+    return gulp.src(bower(), {base: 'vendors'})
+        .pipe(uglify())
+        .pipe(rename('vendors.min.js'))
+        .pipe(gulp.dest('static/js'))
+});
+
+gulp.task('dev', ['vendors', 'templates', 'ts', 'watch'], function () {
     nodemon({
         script: 'dist/server/server.js'
     });

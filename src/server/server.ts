@@ -8,6 +8,8 @@ import Page from '../components/Page/Page';
 
 var app = express();
 
+app.use(express.static('static'))
+
 var Vue: VueServer.Renderer = VueServer.renderer();
 
 app.get('/', function (req, res) {

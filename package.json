@@ -26,6 +26,8 @@
     "gulp-nodemon": "^2.0.6",
     "gulp-rename": "^1.2.2",
     "gulp-typescript": "^2.10.0",
-    "gulp-vue-compile": "^0.3.4"
+    "gulp-uglify": "^1.5.1",
+    "gulp-vue-compile": "^0.3.4",
+    "main-bower-files": "^2.11.1"
   }
 }

@@ -1,0 +1,22 @@
+{
+  "name": "vue-server-example",
+  "description": "Example isomorphic vue.js/vue-server.js application",
+  "main": "server.js",
+  "authors": [
+    "Denis Kolesnikov"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/exdis/vue-server-example",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "~1.0.16"
+  }
+}
