@@ -1,5 +1,13 @@
-abstract class Component {
+export abstract class Component {
+    el: string;
     template: string;
+    methods: any;
 }
 
-export default Component;
+export function asset (path: string): string {
+    if (typeof window === 'undefined') {
+        path = path.replace(/templates/, 'templates/compiled');
+    }
+
+    return path;
+}
